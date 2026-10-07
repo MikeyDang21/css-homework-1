@@ -1,4 +1,4 @@
-/* 1. Skip to Main Content (Sử dụng position & :focus) */
+/* 1. Skip to Main Content (Hiển thị khi focus) */
 a.skip {
     position: absolute;
     top: -50px;
@@ -14,14 +14,20 @@ a.skip:focus {
     top: 0;
 }
 
-/* 2. Style cho Navigation (Sử dụng Flexbox & >3 thuộc tính CSS) */
-nav {
+/* 2. Navigation Styling (Tối ưu Flexbox cho nav ul) */
+nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    list-style-type: none;
     background-color: #2c3e50;
     padding: 15px;
+    margin: 0;
     border-radius: 8px;
+}
+
+nav li {
+    display: inline;
 }
 
 nav a {
@@ -31,7 +37,7 @@ nav a {
     padding: 8px 16px;
 }
 
-/* 3. Hiệu ứng :hover */
+/* 3. Selector :hover */
 nav a:hover {
     background-color: #1abc9c;
     border-radius: 4px;
@@ -47,7 +53,7 @@ img {
     height: auto;
 }
 
-
+/* 5. Cấu hình CSS Grid (2 cột) */
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -55,7 +61,11 @@ img {
     padding: 20px 0;
 }
 
+.grid img {
+    width: 100%;
+}
 
+/* 6. Selector :nth-child (Đổi màu viền xen kẽ) */
 .grid img:nth-child(even) {
     border-color: #3498db;
 }
@@ -64,25 +74,10 @@ img {
     border-color: #e67e22;
 }
 
-/* 7. Cấu hình Flexbox cho danh sách/thư viện ảnh */
+/* 7. Cấu hình CSS Flexbox */
 .flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 15px;
-}
-
-.grid img:nth-child(even) {
-    border-color: #3498db;
-}
-
-.grid img:nth-child(odd) {
-    border-color: #e67e22;
-}
-
-/* 7. Cấu hình Flexbox cho thư viện ảnh */
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
 }
